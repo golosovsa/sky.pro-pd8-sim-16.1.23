@@ -29,8 +29,8 @@ class Guide(db.Model):
 
 
 def update_tours_count():
-    # TODO допишите функцию
-    pass
+    Guide.query.get(1).tours_count = 6
+    db.session.commit()
 
 # не удаляйте код ниже, он необходим
 # для выдачи результата запроса
