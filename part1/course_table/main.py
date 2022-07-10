@@ -20,7 +20,14 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
-# TODO определите модель здесь
+class Course(db.Model):
+    __tablename__ = "course"
+
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String)
+    subject = db.Column(db.String)
+    price = db.Column(db.Integer)
+    weeks = db.Column(db.Float)
 
 
 # Не удаляйте код ниже, он нужен для корректного отображения

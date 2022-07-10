@@ -30,13 +30,11 @@ class User(db.Model):
 
 
 def get_all():
-    # TODO напишите функцию здесь
-    pass
+    return User.query.all()
 
 
-def get_one(id):
-    # TODO напишите функцию здесь
-    pass
+def get_one(pk):
+    return User.query.get(pk)
 
 
 # не удаляйте код ниже, он используется для вывода на экран

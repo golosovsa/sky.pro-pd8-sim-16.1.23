@@ -35,9 +35,16 @@ class City(db.Model):
 
 db.create_all()
 
-# TODO напишите здесь код с запросом на добавление
-# строк в таблицу
-#
+db.session.add_all([
+    City(id=1, name="Рим", country_ru="Италия", population=28730000),
+    City(id=2, name="Милан", country_ru="Италия", population=1333000),
+    City(id=3, name="Венеция", country_ru="Италия", population=265000),
+    City(id=4, name="Стамбул", country_ru="Турция", population=108950000),
+    City(id=5, name="Кемер", country_ru="Турция", population=22421),
+])
+
+db.session.commit()
+
 # Не удаляйте код ниже, он нужен для корректного отображения
 # созданной вами модели при запуске файла
 

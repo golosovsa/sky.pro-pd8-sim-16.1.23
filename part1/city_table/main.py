@@ -21,7 +21,10 @@ db = SQLAlchemy(app)
 
 class City(db.Model):
     __tablename__ = 'city'
-    # TODO определите поля модели здесь
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.Text(100))
+    country_ru = db.Column(db.Text(100))
+    population = db.Column(db.Integer)
 
 
 # Не удаляйте код ниже, он нужен для корректного отображения
